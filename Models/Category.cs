@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ExpenseTracker.Models
@@ -9,13 +10,14 @@ namespace ExpenseTracker.Models
         public int CategoryId { get; set; }
 
         [Column(TypeName = "nvarchar(50)")]
-        public string Title { get; set; }
+        public string Title { get; set; } = "Expense Tracker";
 
         [Column(TypeName = "nvarchar(5)")]
-        public string Icon { get; set; }
+        public string Icon { get; set; } = " ";
 
         [Column(TypeName = "nvarchar(10)")]
-        public string Type { get; set; }
+        public string Type { get; set; } = "Expense";
 
     }
+ 
 }
